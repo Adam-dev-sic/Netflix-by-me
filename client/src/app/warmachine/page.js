@@ -10,7 +10,7 @@ export default function WarMachine() {
       />
 
       <header className="w-full p-4 px-4 md:px-10 flex justify-between items-center">
-        <a href="http://localhost:3000">
+        <a href="/">
           <img src="/Logonetflix.png" alt="Movies" className="h-8 md:h-12" />
         </a>
         <button className="bg-white text-black px-4 rounded-full h-8 text-center text-sm font-black">

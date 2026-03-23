@@ -82,7 +82,7 @@ export default function MangaFlixSliderPage() {
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
-            <a href="http://localhost:3000/warmachine">
+            <a href="/warmachine">
               <div className="group">
                 <img
                   src={item.image}

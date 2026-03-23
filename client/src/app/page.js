@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/80"></div>
 
         <header className="z-10 relative w-full px-4 md:px-10 lg:px-20 xl:px-90 py-5 flex items-center justify-between">
-          <a href="http://localhost:3000">
+          <a href="/">
             <img
               src="/Logonetflix.png"
               alt="Netflix Logo"
@@ -50,7 +50,7 @@ export default function Home() {
             image.
             <br />
             <span className="font-black underline">
-              <a href="http://localhost:3000/movies">
+              <a href="/movies">
                 Click here for Movies sections
               </a>
             </span>
@@ -59,9 +59,9 @@ export default function Home() {
             <input
               type="email"
               placeholder="Email address"
-              className="px-4 py-2 rounded w-full sm:w-[65%] h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
+              className="px-4 py-2 rounded w-[65%] lg:w-full h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
             />
-            <button className="bg-red-600 px-6 py-2 flex items-center justify-center rounded hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
+            <button className="bg-red-600 w-[50%] px-6 py-2 flex items-center justify-center rounded-lg hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
               Get Started
               <span className="ml-2 w-6">
                 <svg
