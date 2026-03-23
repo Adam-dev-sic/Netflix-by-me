@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function homeSlider() {
+export default function HomeSlider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
@@ -36,25 +36,32 @@ export default function homeSlider() {
       {!isEnd && (
         <div className="absolute top-0 right-0 w-[10%] h-full bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
       )}
-      <div className="absolute top-[40%] -left-10 w-z-20 ">
-        <button ref={prevRef} className="h-20 w-fit rounded-full bg-[#434243] ">
-          <svg viewBox="0 0 24 24" width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      {/* Nav buttons — hidden on mobile */}
+      <div className="hidden md:block absolute top-[40%] -left-10 z-20">
+        <button ref={prevRef} className="h-20 w-fit rounded-full bg-[#434243]">
+          <svg viewBox="0 0 24 24" width="25" height="25" fill="none">
             <path d="M15 18L9 12L15 6" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
-      <div className="absolute top-[40%] -right-10 w-z-20 ">
-        <button ref={nextRef} className="h-20 w-fit rounded-full bg-[#434243] ">
-          <svg viewBox="0 0 24 24" width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="hidden md:block absolute top-[40%] -right-10 z-20">
+        <button ref={nextRef} className="h-20 w-fit rounded-full bg-[#434243]">
+          <svg viewBox="0 0 24 24" width="25" height="25" fill="none">
             <path d="M9 18L15 12L9 6" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
+
       <Swiper
         modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerView={5.8}
-        slidesPerGroup={5}
+        spaceBetween={12}
+        breakpoints={{
+          0:    { slidesPerView: 2.2, slidesPerGroup: 2 },
+          480:  { slidesPerView: 3.2, slidesPerGroup: 3 },
+          768:  { slidesPerView: 4.2, slidesPerGroup: 4 },
+          1024: { slidesPerView: 5.8, slidesPerGroup: 5 },
+        }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
           setTimeout(() => {
@@ -78,14 +85,14 @@ export default function homeSlider() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                className="rounded-xl md:rounded-2xl transition-transform duration-300 group-hover:scale-105 w-full"
               />
               <span
                 style={{
                   position: "absolute",
-                  bottom: "28px",
+                  bottom: "20px",
                   left: "2px",
-                  fontSize: "6rem",
+                  fontSize: "clamp(2.5rem, 8vw, 6rem)",
                   fontWeight: "900",
                   color: "black",
                   lineHeight: 1,
@@ -95,7 +102,7 @@ export default function homeSlider() {
               >
                 {index + 1}
               </span>
-              <h3 className="text-lg text-white text-center mt-2">{item.title}</h3>
+              <h3 className="text-sm md:text-lg text-white text-center mt-2">{item.title}</h3>
             </div>
           </SwiperSlide>
         ))}

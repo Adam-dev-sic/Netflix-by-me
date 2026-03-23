@@ -9,23 +9,20 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/80"></div>
 
-        <header className="z-10 relative w-full pr-10 md:px-90 py-5 flex items-center justify-between">
-          {" "}
+        <header className="z-10 relative w-full px-4 md:px-10 lg:px-20 xl:px-90 py-5 flex items-center justify-between">
           <a href="http://localhost:3000">
             <img
               src="/Logonetflix.png"
               alt="Netflix Logo"
-              className="h-12 w-auto object-contain"
+              className="h-8 md:h-12 w-auto object-contain"
             />
           </a>
-          <div className="flex space-x-4">
-            <div className="relative inline-block">
-              {/* Icon on the left */}
+          <div className="flex space-x-2 md:space-x-4">
+            <div className="relative hidden sm:inline-block">
               <div className="absolute left-2 top-1/5 pointer-events-none">
                 <img src="/language.svg" alt="lang" className="w-5 h-5" />
               </div>
-
-              <select className="pl-10 pr-4 py-1.5 h-fit  text-white rounded border border-gray-500">
+              <select className="pl-10 pr-4 py-1.5 h-fit text-white rounded border border-gray-500 bg-transparent text-sm">
                 <option className="text-black" value="en">
                   English
                 </option>
@@ -37,56 +34,48 @@ export default function Home() {
                 </option>
               </select>
             </div>
-            <button className="bg-red-600 px-6 py-1 text-md font-bold rounded hover:bg-red-700 transition">
+            <button className="bg-red-600 px-4 md:px-6 py-1 text-sm md:text-md font-bold rounded hover:bg-red-700 transition">
               Sign In
             </button>
           </div>
         </header>
 
-        {/* Content on top of overlay */}
+        {/* Hero content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <h1 className="text-7xl font-black mb-4">Welcome to Netflix Clone</h1>
-          <p className="text-lg font-bold max-w-xl mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4">
+            Welcome to Netflix Clone
+          </h1>
+          <p className="text-base md:text-lg font-bold max-w-xl mb-6">
             This is a hero section with a dark overlay on top of the background
             image.
             <br />
             <span className="font-black underline">
-              {" "}
               <a href="http://localhost:3000/movies">
                 Click here for Movies sections
               </a>
             </span>
           </p>
-          <div className="flex space-x-4 w-[40%]">
+          <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full max-w-xl px-4">
             <input
               type="email"
               placeholder="Email address"
-              className="px-4 py-2 rounded w-[65%] h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white!"
+              className="px-4 py-2 rounded w-full sm:w-[65%] h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
             />
-            <button className="bg-red-600 px-6 py-2  flex items-center justify-center rounded hover:bg-red-700 transition h-16 font-black text-2xl hover:cursor-pointer">
+            <button className="bg-red-600 px-6 py-2 flex items-center justify-center rounded hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
               Get Started
-              <span className="ml-2 w-7">
+              <span className="ml-2 w-6">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke="#CCCCCC"
-                    stroke-width="0.048"
-                  ></g>
                   <g id="SVGRepo_iconCarrier">
-                    {" "}
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z"
                       fill="#ffffff"
-                    ></path>{" "}
+                    />
                   </g>
                 </svg>
               </span>
@@ -95,62 +84,34 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="
-    relative 
-    h-25
-    rounded-tl-[35%] rounded-tr-[35%]
-    overflow-hidden
-bg-black
-
-    -mt-16
-    w-full
-  "
-      >
-        <div
-          className="
-relative
-      top-0
-      h-16
-      
-
-      left-0 
-      w-full 
-      rounded-tl-[100%] rounded-tr-[100%]
-
-      bg-gradient-to-r from-pink-400/20 via-red-500 to-pink-400/20
-   
-    "
-        />
-
-        <div
-          className="
-absolute
-      top-1.5
-      h-16
-      
-z-5000
-      left-0 
-      w-full
-       
-      rounded-tl-[45%] rounded-tr-[45%]
-            bg-[radial-gradient(ellipse_at_50%_0,#131d46,black_75%)]"
-        />
-        {/* content */}
-        {/* <div className="z-10 h-2500 bg-green-50">your trending section</div> */}
+      {/* Decorative curve divider */}
+      <div className="relative h-25 rounded-tl-[35%] rounded-tr-[35%] overflow-hidden bg-black -mt-16 w-full">
+        <div className="relative top-0 h-16 left-0 w-full rounded-tl-[100%] rounded-tr-[100%] bg-gradient-to-r from-pink-400/20 via-red-500 to-pink-400/20" />
+        <div className="absolute top-1.5 h-16 z-5000 left-0 w-full rounded-tl-[45%] rounded-tr-[45%] bg-[radial-gradient(ellipse_at_50%_0,#131d46,black_75%)]" />
       </div>
-      <div className="text-white space-y-15 bg-black px-80 mt-10">
+
+      {/* Main content */}
+      <div className="text-white space-y-12 md:space-y-15 bg-black px-4 sm:px-8 md:px-16 lg:px-40 xl:px-80 mt-10">
+        {/* Trending */}
         <div>
-          <h1 className="text-3xl font-black mb-10">Trending Now </h1>
+          <h1 className="text-2xl md:text-3xl font-black mb-6 md:mb-10">
+            Trending Now
+          </h1>
           <HomeSlider />
         </div>
-        <div>
-          <h1 className="text-3xl font-black">More Reasons To Join </h1>
-          <div className="flex p-2 space-x-4 mt-5">
-            <div className="w-[25%] h-80 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
-              <h3 className="text-white font-bold text-2xl">Enjoy Your Tv</h3>
 
-              <p className="text-gray-400 text-lg">
+        {/* More Reasons */}
+        <div>
+          <h1 className="text-2xl md:text-3xl font-black mb-4 md:mb-5">
+            More Reasons To Join
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+            {/* TV card */}
+            <div className="w-full h-auto min-h-64 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
+              <h3 className="text-white font-bold text-xl md:text-2xl">
+                Enjoy Your Tv
+              </h3>
+              <p className="text-gray-400 text-base md:text-lg">
                 Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
                 Blu-ray players, and more.
               </p>
@@ -275,12 +236,12 @@ z-5000
                 </svg>
               </div>
             </div>
-            <div className="w-[25%] h-80 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
-              <h3 className="text-white font-bold text-2xl">
+            {/* Download card */}
+            <div className="w-full h-auto min-h-64 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
+              <h3 className="text-white font-bold text-xl md:text-2xl">
                 Download your shows to watch offline
               </h3>
-
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base md:text-lg">
                 Save your favorites easily and always have something to watch.
               </p>
               <div className="w-full h-full flex items-end justify-end">
@@ -436,12 +397,12 @@ z-5000
                 </svg>
               </div>
             </div>
-            <div className="w-[25%] h-80 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
-              <h3 className="text-white font-bold text-2xl">
+            {/* Watch everywhere card */}
+            <div className="w-full h-auto min-h-64 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
+              <h3 className="text-white font-bold text-xl md:text-2xl">
                 Watch everywhere
               </h3>
-
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base md:text-lg">
                 Stream unlimited movies and TV shows on your phone, tablet,
                 laptop, and TV.
               </p>
@@ -626,12 +587,12 @@ z-5000
                 </svg>
               </div>
             </div>
-            <div className="w-[25%] h-80 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
-              <h3 className="text-white font-bold text-2xl">
+            {/* Kids card */}
+            <div className="w-full h-auto min-h-64 px-6 py-7 bg-linear-to-br from-[#1a1f40] flex flex-col space-y-4 to-[#200f19] rounded-lg">
+              <h3 className="text-white font-bold text-xl md:text-2xl">
                 Create profiles for kids
               </h3>
-
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base md:text-lg">
                 Send kids on adventures with their favorite characters in a
                 space made just for them — free with your membership.
               </p>
@@ -827,155 +788,139 @@ z-5000
             </div>
           </div>
         </div>
-        <div>
-          <h1 className="text-3xl font-black">Frequently Asked Questions</h1>
 
+        {/* FAQ */}
+        <div>
+          <h1 className="text-2xl md:text-3xl font-black">
+            Frequently Asked Questions
+          </h1>
           <FAQAccordion />
         </div>
 
+        {/* Bottom CTA */}
         <div className="flex items-center justify-center flex-col">
-          <h3 className="text-lg  font-medium">
+          <h3 className="text-base md:text-lg font-medium text-center">
             Ready to watch? Enter your email to create or restart your
             membership.
           </h3>
-          <div className="w-[80%] h-16 mt-4 flex space-x-2 items-center justify-center">
+          <div className="w-full md:w-[80%] mt-4 flex flex-col sm:flex-row gap-3 items-center justify-center">
             <input
               type="email"
               placeholder="Email address"
-              className="px-4 py-2 rounded w-[65%] h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f] text-white!"
+              className="px-4 py-2 rounded w-full sm:w-[65%] h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f] text-white"
             />
-            <button className="bg-red-600 px-6 py-2  flex items-center justify-center rounded hover:bg-red-700 transition h-16 font-black text-2xl hover:cursor-pointer">
+            <button className="bg-red-600 px-6 py-2 flex items-center justify-center rounded hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer w-full sm:w-auto">
               Get Started
-              <span className="ml-2 w-7">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke="#CCCCCC"
-                    stroke-width="0.048"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z"
-                      fill="#ffffff"
-                    ></path>{" "}
-                  </g>
+              <span className="ml-2 w-6">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z"
+                    fill="#ffffff"
+                  />
                 </svg>
               </span>
             </button>
           </div>
         </div>
       </div>
-      <footer class="bg-black px-80 text-white mt-25">
-        <p class="mb-15 underline cursor-pointer font-medium text-[#FFFFFFB3] w-fit">
+
+      {/* Footer */}
+      <footer className="bg-black px-4 sm:px-8 md:px-16 lg:px-40 xl:px-80 text-white mt-16 md:mt-25 pb-10">
+        <p className="mb-8 md:mb-15 underline cursor-pointer font-medium text-[#FFFFFFB3] w-fit">
           Questions? Contact us.
         </p>
-
-        <div class="text-[#FFFFFFB3] font-medium text-sm grid grid-cols-2 md:grid-cols-4 gap-6">
-          <ul class="space-y-2">
+        <div className="text-[#FFFFFFB3] font-medium text-sm grid grid-cols-2 md:grid-cols-4 gap-6">
+          <ul className="space-y-2">
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Help Center
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Account
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Media Center
               </a>
             </li>
           </ul>
-
-          <ul class="space-y-2">
+          <ul className="space-y-2">
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Investor Relations
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Jobs
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Ways to Watch
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Terms of Use
               </a>
             </li>
           </ul>
-
-          <ul class="space-y-2">
+          <ul className="space-y-2">
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Privacy
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Cookie Preferences
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Corporate Information
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Contact Us
               </a>
             </li>
           </ul>
-
-          <ul class="space-y-2">
+          <ul className="space-y-2">
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Speed Test
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Legal Notices
               </a>
             </li>
             <li>
-              <a href="#" class="underline">
+              <a href="#" className="underline">
                 Only on Netflix
               </a>
             </li>
           </ul>
         </div>
-
-        <div className="relative inline-block mt-10">
-          {/* Icon on the left */}
+        <div className="relative inline-block mt-8 md:mt-10">
           <div className="absolute left-2 top-1/5 pointer-events-none">
             <img src="/language.svg" alt="lang" className="w-5 h-5" />
           </div>
-
-          <select className="pl-10 pr-4 py-1.5 h-fit  text-white rounded border border-gray-500">
+          <select className="pl-10 pr-4 py-1.5 h-fit text-white rounded border border-gray-500 bg-transparent">
             <option className="text-black" value="en">
               English
             </option>
