@@ -59,9 +59,9 @@ export default function Home() {
             <input
               type="email"
               placeholder="Email address"
-              className="px-4 py-2 rounded w-[65%] lg:w-full h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
+              className="px-4 py-2 rounded w-[90%] lg:w-full h-14 md:h-16 border self-center border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
             />
-            <button className="bg-red-600 w-[70%] px-6 py-2 flex items-center justify-center rounded-lg hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
+            <button className="bg-red-600 w-[60%] self-center lg:w-[70%] px-6 py-2 flex items-center justify-center rounded-lg hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
               Get Started
               <span className="ml-2 w-6">
                 <svg
