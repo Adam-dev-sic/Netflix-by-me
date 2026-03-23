@@ -41,14 +41,26 @@ export default function HomeSlider() {
       <div className="hidden md:block absolute top-[40%] -left-10 z-20">
         <button ref={prevRef} className="h-20 w-fit rounded-full bg-[#434243]">
           <svg viewBox="0 0 24 24" width="25" height="25" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </div>
       <div className="hidden md:block absolute top-[40%] -right-10 z-20">
         <button ref={nextRef} className="h-20 w-fit rounded-full bg-[#434243]">
           <svg viewBox="0 0 24 24" width="25" height="25" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </div>
@@ -57,9 +69,9 @@ export default function HomeSlider() {
         modules={[Navigation]}
         spaceBetween={12}
         breakpoints={{
-          0:    { slidesPerView: 2.2, slidesPerGroup: 2 },
-          480:  { slidesPerView: 3.2, slidesPerGroup: 3 },
-          768:  { slidesPerView: 4.2, slidesPerGroup: 4 },
+          0: { slidesPerView: 2.2, slidesPerGroup: 2 },
+          480: { slidesPerView: 3.2, slidesPerGroup: 3 },
+          768: { slidesPerView: 4.2, slidesPerGroup: 4 },
           1024: { slidesPerView: 5.8, slidesPerGroup: 5 },
         }}
         onSwiper={(swiper) => {
@@ -81,29 +93,33 @@ export default function HomeSlider() {
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="group relative">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="rounded-xl md:rounded-2xl transition-transform duration-300 group-hover:scale-105 w-full"
-              />
-              <span
-                style={{
-                  position: "absolute",
-                  bottom: "20px",
-                  left: "2px",
-                  fontSize: "clamp(2.5rem, 8vw, 6rem)",
-                  fontWeight: "900",
-                  color: "black",
-                  lineHeight: 1,
-                  userSelect: "none",
-                  WebkitTextStroke: "2px #ffffff",
-                }}
-              >
-                {index + 1}
-              </span>
-              <h3 className="text-sm md:text-lg text-white text-center mt-2">{item.title}</h3>
-            </div>
+            <a href="/warmachine">
+              <div className="group relative">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="rounded-xl md:rounded-2xl transition-transform duration-300 group-hover:scale-105 w-full"
+                />
+                <span
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "2px",
+                    fontSize: "clamp(2.5rem, 8vw, 6rem)",
+                    fontWeight: "900",
+                    color: "black",
+                    lineHeight: 1,
+                    userSelect: "none",
+                    WebkitTextStroke: "2px #ffffff",
+                  }}
+                >
+                  {index + 1}
+                </span>
+                <h3 className="text-sm md:text-lg text-white text-center mt-2">
+                  {item.title}
+                </h3>
+              </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>
