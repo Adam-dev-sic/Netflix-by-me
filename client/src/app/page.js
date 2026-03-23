@@ -41,7 +41,7 @@ export default function Home() {
         </header>
 
         {/* Hero content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <div className="relative w-full z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4">
             Welcome to Netflix Clone
           </h1>
@@ -61,7 +61,7 @@ export default function Home() {
               placeholder="Email address"
               className="px-4 py-2 rounded w-[65%] lg:w-full h-14 md:h-16 border border-[#5e5e5e] placeholder-gray-300 bg-[#0f0f0f]/70 text-white"
             />
-            <button className="bg-red-600 w-[50%] px-6 py-2 flex items-center justify-center rounded-lg hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
+            <button className="bg-red-600 w-[70%] px-6 py-2 flex items-center justify-center rounded-lg hover:bg-red-700 transition h-14 md:h-16 font-black text-xl md:text-2xl hover:cursor-pointer">
               Get Started
               <span className="ml-2 w-6">
                 <svg
