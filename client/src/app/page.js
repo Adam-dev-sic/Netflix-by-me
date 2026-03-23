@@ -11,11 +11,13 @@ export default function Home() {
 
         <header className="z-10 relative w-full pr-10 md:px-90 py-5 flex items-center justify-between">
           {" "}
-          <img
-            src="/Logonetflix.png"
-            alt="Netflix Logo"
-            className="h-12 w-auto object-contain"
-          />
+          <a href="http://localhost:3000">
+            <img
+              src="/Logonetflix.png"
+              alt="Netflix Logo"
+              className="h-12 w-auto object-contain"
+            />
+          </a>
           <div className="flex space-x-4">
             <div className="relative inline-block">
               {/* Icon on the left */}
@@ -47,6 +49,13 @@ export default function Home() {
           <p className="text-lg font-bold max-w-xl mb-6">
             This is a hero section with a dark overlay on top of the background
             image.
+            <br />
+            <span className="font-black underline">
+              {" "}
+              <a href="http://localhost:3000/movies">
+                Click here for Movies sections
+              </a>
+            </span>
           </p>
           <div className="flex space-x-4 w-[40%]">
             <input

@@ -31,7 +31,7 @@ export default function MangaFlixSliderPage() {
   ];
 
   return (
-    <div className="relative">
+    <div  className="relative">
       {!isBeginning && (
         <div className="absolute top-0 left-0 w-[10%] h-full bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
       )}
@@ -109,6 +109,7 @@ export default function MangaFlixSliderPage() {
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
+            <a href="http://localhost:3000/warmachine">
             <div className="group">
               <img
                 src={item.image}
@@ -119,6 +120,7 @@ export default function MangaFlixSliderPage() {
                 {item.title}
               </h3>
             </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

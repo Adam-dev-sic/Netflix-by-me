@@ -10,7 +10,9 @@ export default function movies() {
         src="moviesPage.jpg"
       />
       <header className="w-full p-4 px-10 flex justify-between items-center">
-        <img src="/Logonetflix.png" alt="Movies" className="h-12" />
+        <a href="http://localhost:3000">
+          <img src="/Logonetflix.png" alt="Movies" className="h-12" />
+        </a>
         <button className="bg-white text-black px-4  rounded-full h-8 text-center text-sm font-black ">
           Sign In
         </button>
@@ -65,9 +67,9 @@ export default function movies() {
         <MangaFlixSliderPage />{" "}
         <h1 className="text-3xl font-black">Recommended</h1>
         <MangaFlixSliderPage />
-          <h1 className="text-3xl font-black">Comedy</h1>
+        <h1 className="text-3xl font-black">Comedy</h1>
         <MangaFlixSliderPage />
-          <h1 className="text-3xl font-black">Action</h1>
+        <h1 className="text-3xl font-black">Action</h1>
         <MangaFlixSliderPage />
         <h1 className="text-3xl font-black">A Plan To Suit Your Needs</h1>
         <div className="flex flex-wrap gap-2">
