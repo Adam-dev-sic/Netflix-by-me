@@ -97,7 +97,14 @@ export default function WarMachine() {
         </div>
 
         {/* Pricing */}
-        <div>
+       
+
+        <h1 className="text-2xl md:text-3xl font-black">You might also like</h1>
+        <MangaFlixSliderPage />
+        <h1 className="text-2xl md:text-3xl font-black">Trending</h1>
+        <MangaFlixSliderPage />
+      </div>
+ <div>
           <h1 className="text-2xl md:text-3xl font-black mb-4">A Plan To Suit Your Needs</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-linear-to-br p-4 from-[#1c4072] via-[#141a31] to-[#120c1f] rounded-2xl border-2 border-cyan-700/60 flex flex-col space-y-2 hover:from-[#2e5c9b] hover:border-cyan-500 cursor-pointer transition-all duration-300">
@@ -121,13 +128,6 @@ export default function WarMachine() {
             </div>
           </div>
         </div>
-
-        <h1 className="text-2xl md:text-3xl font-black">You might also like</h1>
-        <MangaFlixSliderPage />
-        <h1 className="text-2xl md:text-3xl font-black">Trending</h1>
-        <MangaFlixSliderPage />
-      </div>
-
       {/* Footer */}
       <footer className="px-4 sm:px-8 md:px-16 lg:px-40 xl:px-80 text-white mt-16 md:mt-25 pb-10">
         <p className="mb-8 underline cursor-pointer font-medium text-[#FFFFFFB3] w-fit">Questions? Contact us.</p>
